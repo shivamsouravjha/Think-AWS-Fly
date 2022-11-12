@@ -5,21 +5,15 @@ import (
 	"fmt"
 	"os"
 	"piepay/config"
+	s3 "piepay/services/s3Bucket"
 
 	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/credentials"
-	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3/s3manager"
 )
 
 func AcessAWSHelper(ctx context.Context, filename string) (string, error) {
 	// The session the S3 Uploader will use
-	sess := session.Must(session.NewSession(
-		&aws.Config{
-			Region:      aws.String("ap-south-1"),
-			Credentials: credentials.NewStaticCredentials(config.Get().AWSAccessKey, config.Get().AWSSecretKey, ""),
-		},
-	))
+	sess := s3.AwsSession()
 
 	// Create an uploader with the session and default options
 	uploader := s3manager.NewUploader(sess)

@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"piepay/controllers/GET"
 	POST "piepay/controllers/POST"
 
 	"github.com/gin-gonic/gin"
@@ -15,5 +16,6 @@ func v1Routes(route *gin.RouterGroup) {
 	v1Routes := route.Group("/v1")
 	{
 		v1Routes.POST("/upload/image", POST.UploadImage)
+		v1Routes.GET("/fetch/buckets", GET.GetImages)
 	}
 }
