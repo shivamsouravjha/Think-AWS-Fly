@@ -14,7 +14,6 @@ func v1Routes(route *gin.RouterGroup) {
 
 	v1Routes := route.Group("/v1")
 	{
-		v1Routes.GET("/get", GET.GetVideo)       //the route to get the paginated video
-		v1Routes.GET("/search", GET.SearchVideo) //the route to search the video on basis of title and description
+		v1Routes.GET("/get", GET.AcessAWS)
 	}
 }

@@ -1,7 +1,7 @@
 package GET
 
 import (
-	"context"
+	"fmt"
 	"net/http"
 	helpers "piepay/helpers/es"
 	"piepay/structs/requests"
@@ -12,15 +12,11 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func GetVideo(c *gin.Context) {
-	defer sentry.Recover()
-	span := sentry.StartSpan(context.TODO(), "[GIN] GetVideoHandler", sentry.TransactionName("Get latest video")) //setting transaction sentry
-	defer span.Finish()
+func AcessAWS(c *gin.Context) {
 
 	formRequest := requests.GetVideo{}
 
 	if err := c.ShouldBind(&formRequest); err != nil {
-		span.Status = sentry.SpanStatusFailedPrecondition
 		sentry.CaptureException(err)
 		c.JSON(422, utils.SendErrorResponse(err))
 		return
@@ -28,7 +24,7 @@ func GetVideo(c *gin.Context) {
 	ctx := c.Request.Context()
 	resp := response.VideoResponse{}
 
-	response, err := helpers.GetLatestVideo(ctx, &formRequest, span.Context()) //the DAO level
+	response, err := helpers.AcessAWSHelper(ctx) //the DAO level
 	if err != nil {
 		resp.Status = "Failed"
 		resp.Message = err.Error()
@@ -38,9 +34,7 @@ func GetVideo(c *gin.Context) {
 
 	resp.Status = "Success"
 	resp.Message = "Video fetched successfully"
-	resp.Data = response
-	span.Status = sentry.SpanStatusOK
-
+	fmt.Println(response)
 	c.JSON(http.StatusOK, resp)
 
 }
