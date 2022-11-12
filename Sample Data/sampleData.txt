@@ -1,0 +1,179 @@
+
+Sample Query:-GET /video/_search
+{
+  "query": {
+	    "match_all": {
+	      
+	    }
+	  }
+}
+Sample Data(to show data would look in Elasticsearch)
+ {
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 480,
+      "relation" : "eq"
+    },
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "video",
+        "_id" : "Xm_g5kvasrY",
+        "_score" : 1.0,
+        "_source" : {
+          "ID" : {
+            "videoID" : "Xm_g5kvasrY"
+          },
+          "publishedAt" : "2022-06-13T05:26:01Z",
+          "title" : "เที่ยงกินฟินเที่ยว : สไลเดอร์หินสวนน้ำกลางเขาภูวัว | 13-06-65 | ข่าวเที่ยงไทยรัฐ",
+          "description" : """เริ่มต้นสัปดาห์ใหม่ชวนไปเที่ยว "สไลเดอร์หินสวนน้ำกลางเขาธรรมชาติที่ดูเหมือนมนุษย์สร้าง ก่อนไปดูลีลาการขายแบบใหม่ด้วยการใส่ชุดไดโนเสาร์ ...""",
+          "channelId" : "UCrFDdD-EE05N7gjwZho2wqw",
+          "channelTitle" : "Thairath Online"
+        }
+      },
+      {
+        "_index" : "video",
+        "_id" : "cRDluYEakIk",
+        "_score" : 1.0,
+        "_source" : {
+          "ID" : {
+            "videoID" : "cRDluYEakIk"
+          },
+          "publishedAt" : "2022-06-13T05:30:41Z",
+          "title" : "Kisah Sukses Violenzia Jeanette, Pernah Jadi SPG dan Marketing IT | SOBAT MISQUEEN (11/06/22) Part 3",
+          "description" : "Live Streaming : https://v7.video/livestreaming/TRANS7-Live-Streaming === SOBAT MISQUEEN Sabtu, 11 Juni 2022 PART 1 ...",
+          "channelId" : "UC24_Z2L-8Ki183AI9zJJzNQ",
+          "channelTitle" : "TRANS7 OFFICIAL"
+        }
+      },
+      {
+        "_index" : "video",
+        "_id" : "JHEKfLlFsOQ",
+        "_score" : 1.0,
+        "_source" : {
+          "ID" : {
+            "videoID" : "JHEKfLlFsOQ"
+          },
+          "publishedAt" : "2022-06-13T05:29:57Z",
+          "title" : "നാഷണല്‍ ഹെറാള്‍ഡ് കേസ് രാഷ്ട്രീയ പകപോക്കലെന്ന് ഉമ്മന്‍ ചാണ്ടി | Oommen Chandy",
+          "description" : "The official YouTube channel for Manorama News. Subscribe us to watch the missed episodes. Subscribe to the ...",
+          "channelId" : "UCP0uG-mcMImgKnJz-VjJZmQ",
+          "channelTitle" : "Manorama News"
+        }
+      },
+      {
+        "_index" : "video",
+        "_id" : "Q5gllVZnOi0",
+        "_score" : 1.0,
+        "_source" : {
+          "ID" : {
+            "videoID" : "Q5gllVZnOi0"
+          },
+          "publishedAt" : "2022-06-13T05:43:31Z",
+          "title" : "ถ่ายทอดสด เที่ยงวันทันเหตุการณ์ วันที่ 13 มิถุนายน 2565",
+          "description" : "ถ่ายทอดสด เที่ยงวันทันเหตุการณ์ วันที่ 13 มิถุนายน 2565 ------------------------------ #เที่ยงวันทันเหตุการณ์ (MiddayNews) ...",
+          "channelId" : "UCirZPTc9IoKM_DsA9aKbc4g",
+          "channelTitle" : "3PlusNews"
+        }
+      },
+      {
+        "_index" : "video",
+        "_id" : "eZ7zPrfhBX0",
+        "_score" : 1.0,
+        "_source" : {
+          "ID" : {
+            "videoID" : "eZ7zPrfhBX0"
+          },
+          "publishedAt" : "2022-06-13T05:41:25Z",
+          "title" : "Aurangabad: हल्ल्याप्रकरणी पूर्वकल्पना देऊनही पोलिसांनी खबरदारी घेतली नाही: भागवत कराड",
+          "description" : "ABPMajha #MarathiNews Aurangabad: हल्ल्याप्रकरणी पूर्वकल्पना देऊनही ...",
+          "channelId" : "UCH7nv1A9xIrAifZJNvt7cgA",
+          "channelTitle" : "ABP MAJHA"
+        }
+      },
+      {
+        "_index" : "video",
+        "_id" : "L6YCqMW7iQA",
+        "_score" : 1.0,
+        "_source" : {
+          "ID" : {
+            "videoID" : "L6YCqMW7iQA"
+          },
+          "publishedAt" : "2022-06-13T05:32:59Z",
+          "title" : "Budget 23-2022: Will there be another showdown in Punjab Assembly today?",
+          "description" : "Budget 23-2022: Will there be another showdown in Punjab Assembly today? Do not miss an important news update ever.",
+          "channelId" : "UC_vt34wimdCzdkrzVejwX9g",
+          "channelTitle" : "Geo News"
+        }
+      },
+      {
+        "_index" : "video",
+        "_id" : "xqkxt5uGjNA",
+        "_score" : 1.0,
+        "_source" : {
+          "ID" : {
+            "videoID" : "xqkxt5uGjNA"
+          },
+          "publishedAt" : "2022-06-13T05:33:02Z",
+          "title" : "Chandrkant Patil On 2024 Election :  2024 ला भाजप एकटा लढून राज्यात 42 ते 43 खासदार निवडणून आणेल",
+          "description" : "ABPMajha #MarathiNews #RajyaSabhaResult #Maharashtra #DhananjayMahadik #मराठीबातम्या ...",
+          "channelId" : "UCH7nv1A9xIrAifZJNvt7cgA",
+          "channelTitle" : "ABP MAJHA"
+        }
+      },
+      {
+        "_index" : "video",
+        "_id" : "7PtqoQlUttw",
+        "_score" : 1.0,
+        "_source" : {
+          "ID" : {
+            "videoID" : "7PtqoQlUttw"
+          },
+          "publishedAt" : "2022-06-13T05:30:00Z",
+          "title" : "산소부족 물덩어리 진해만 확대…양식어가 ‘주의’ / KBS  2022.06.13.",
+          "description" : "지난달 30일 올해 첫 '산소부족 물덩어리'가 남해 연안에 발상한 이후 진해만으로 범위가 확대되고 있습니다. 국립수산과학원은 산소 ...",
+          "channelId" : "UCcQTRi69dsVYHN3exePtZ1A",
+          "channelTitle" : "KBS News"
+        }
+      },
+      {
+        "_index" : "video",
+        "_id" : "aazypUfv6-4",
+        "_score" : 1.0,
+        "_source" : {
+          "ID" : {
+            "videoID" : "aazypUfv6-4"
+          },
+          "publishedAt" : "2022-06-13T05:25:56Z",
+          "title" : "Congress Protest: ಸೋನಿಯಾ, ರಾಗಾಗೆ ಇಡಿ ನೋಟಿಸ್​ ಪ್ರತಿಭಟನೆ | Tv9 Kannada",
+          "description" : "ಸೋನಿಯಾ, ರಾಹುಲ್​ ಗಾಂಧಿಗೆ ಇಡಿ ನೋಟಿಸ್​​ ಹಿನ್ನೆಲೆ. ಬೆಂಗಳೂರಿನಲ್ಲಿ ...",
+          "channelId" : "UC8dnBi4WUErqYQHZ4PfsLTg",
+          "channelTitle" : "Tv9 Kannada"
+        }
+      },
+      {
+        "_index" : "video",
+        "_id" : "tMnjDLqyvgA",
+        "_score" : 1.0,
+        "_source" : {
+          "ID" : {
+            "videoID" : "tMnjDLqyvgA"
+          },
+          "publishedAt" : "2022-06-13T05:44:58Z",
+          "title" : "Zee Rajasthan Live :कांग्रेस का हल्ला बोल सहित अन्य खबर | Rahul Gandhi |Congress Protest | ED Notice",
+          "description" : "Zee Rajasthan Live :कांग्रेस का हल्ला बोल सहित अन्य खबर | Rahul Gandhi |Congress Protest | ED ...",
+          "channelId" : "UCfnvGSUXKIuaCv-9E9a2UJg",
+          "channelTitle" : "Zee Rajasthan"
+        }
+      }
+    ]
+  }
+}
