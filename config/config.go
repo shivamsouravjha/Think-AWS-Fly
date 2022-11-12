@@ -10,6 +10,7 @@ import (
 )
 
 type Config struct {
+	Bucket               string
 	AppName              string
 	AppEnv               string
 	SqlPrefix            string
@@ -55,7 +56,7 @@ func init() {
 		appEnv = "dev"
 	}
 
-	configFilePath := "./config/.env"
+	configFilePath := ".env"
 
 	switch appEnv {
 	case "production":
@@ -100,6 +101,7 @@ func init() {
 	config.Topic = os.Getenv("topic")
 	config.Key = os.Getenv("Key")
 	config.Index = os.Getenv("Index")
+	config.Bucket = os.Getenv("Bucket")
 
 	YoutubeKey = os.Getenv("YoutubeKey")
 	YoutubeKeyList = strings.Split(YoutubeKey, ",")
