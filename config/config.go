@@ -52,6 +52,7 @@ var Passcode = 0
 // or code.
 func init() {
 	appEnv := os.Getenv("APP_ENV")
+	fmt.Println(appEnv)
 	if len(appEnv) == 0 {
 		appEnv = "dev"
 	}
