@@ -90,8 +90,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: ${{ env.ECS_SERVICE }}
-        cluster: ${{ 
-        
-        
-        .ECS_CLUSTER }}
+        cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
